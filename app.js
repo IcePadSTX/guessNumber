@@ -8,6 +8,7 @@ function one() {
         const userNum = +prompt("Введите число");
         if (attempts == 0) {
             if (prompt("У вас больше нет попыток. Хотите начать заново?")) {
+                attempts = 10;
                 number(Math.floor(Math.random() * 101));
             } else {
                 return;
@@ -31,8 +32,13 @@ function one() {
                 two(compNum);
             }
         } else {
-            prompt('Вы победили!!! Хотите сыграть ещё?');
-            return
+            if(prompt('Вы угадали!!! Хотите попробовать еще раз?')){
+                attempts = 10;
+                number(Math.floor(Math.random() * 101));
+            } else {
+                return;
+            }
+            
         }
     }
 
