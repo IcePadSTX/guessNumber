@@ -7,7 +7,7 @@ function one() {
         console.log(compNum);
         const userNum = +prompt("Введите число");
         if (attempts == 0) {
-            if (prompt("У вас уже нет свободных ходов. Хотите сыграть ещё?")) {
+            if (prompt("У вас больше нет попыток. Хотите начать заново?")) {
                 number(Math.floor(Math.random() * 101));
             } else {
                 return;
