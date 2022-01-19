@@ -22,7 +22,7 @@ function one() {
         }
 
         if (userNum != compNum) {
-            moves--;
+            attempts--;
             if (compNum < userNum) {
                 alert(`Загаданное число меньше! У вас осталось ${attempts} ходов`);
                 two(compNum);
